@@ -1,0 +1,60 @@
+
+
+\documentclass[12pt, a4paper]{article}
+
+
+
+\begin{document}
+
+
+	\section{Basic Maths Equations}
+	
+		You can have equations in a paragraph like this, just use singular ``\$" $F=ma$. This way, you can embed different terms like $\theta$ and $C_1$ in our sentences. It's pretty cool if you ask me.
+	
+		Sometimes you want to have an equation by itself between paragraphs and that's fine too. You can use double ``\$" to do that for you. If you include it inbetween a paragraph like this, $$v = ut + \frac{1}{2}at^2$$ you will split the paragraph in 2, which is fine if that's what you intended.
+
+		If you really need to, for references later in your document, you can use the ``\texttt{\textbackslash begin\{equation\}}" line to label them with numbers. This feature and ``\$" are only used in \LaTeX , so you can't use this line in Word's Maths equation editor. You do not need to use ``\$" for this. Below is an example:
+		
+		\begin{equation}
+			L\{f(t)\} = F(s)
+		\end{equation}
+
+		
+		You can see that it's labelled with a number that's automatically generated. And that's one of the reasons to use \LaTeX . Below is some sample code to get you started:
+		
+		$A + B = C$ is a simple equation that we can define inside \LaTeX . $V_1$
+		
+		$$A^3 + B^2 = C^4$$
+		
+		$$A^{x+3}$$
+		
+		$$V_{RC}$$
+		
+		$$S = \left[\frac{s+4}{(s+2)(s+3)}\right]$$
+		
+		$$ tan(\tau)$$
+
+		Simple Equation:
+		$$A + B = C$$
+		
+		Exponents:
+		$$A^2 + B^{1+1} = C^2$$
+		
+		Subscripts:
+		$$V_T = V_i + V_{RC}$$
+		
+		Fractions:
+		$$\frac{s+5}{(s+6)(s+4)} = \frac{A}{s+6} + \frac{B}{s+4}$$
+		
+		Brackets for large equations:
+		$$\left[\frac{b_1 + b_2z_1}{1 + a_1z^1 +a_2z^2 + a_3z^3}\right]z^{-2}$$
+		
+		Greek Letters:
+		$$tan(\theta) = \frac{opp}{adj}$$
+		
+		\begin{equation}
+		H(s) = \frac{s+5}{(s+3)(s+4)}
+		\end{equation}
+		
+
+\end{document}
