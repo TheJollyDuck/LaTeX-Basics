@@ -14,10 +14,13 @@
 % type of document
 \documentclass[12pt, a4paper]{article}
 
+% Types of documents: Article, Report, Book, etc.
+% Chapter headings cannot be used in article
+
 % These lines just have the title, author, and date
 % set for you
-\title{Example Document}
-\author{I dunno? You :)}
+\title{Session 1 \\ Creating Your First Document}
+\author{Just a Random Person}
 \date{\today} % The \today line sets the document to the current date
 
 
@@ -25,19 +28,36 @@
 % Think of it like a main function
 \begin{document}
 	
-	
+	% This command automatically generates the title in the document
 	\maketitle
 			
-	\section{First Section}
+	\section{Introduction}
+		Hello and welcome to \LaTeX Basics, where we will cover some of the necessary stuff you need to know in order to generate documents using the \LaTeX environment. These notes are just to get you started on creating a very basic code. These notes are a work in progress, so these will be updated as time goes on. I encourage you to read the source code of these PDFs as they will give you insight as to how they are written. So let's get started!
+	
+	\section{Paragraphs}
+		I'm assuming at this point you've looked at the source code. If you haven't go ahead and do so and read up on the comments to show you how to start. When you start writing up you document, the most basic thing that you will be dealing with is the paragraph. Paragraphs are easy and simple to implement. Just start writing up some text and compile and hey presto! You've got your first paragraph! 
 		
-		You can place text under here!
+		To create another paragraph under the first, just leave one line of whitespace in the editor and the compiler will output the second paragraph separate from the first. All consequent paragraphs of the first will be indented (although this is not always the case, as we will discuss in future notes). This is done to relieve you of some of the formatting issues that one can have in word processors, such as MS Word and LibreOffice Writer.
+		
+		If you remember these rules, you'll be creating paragraphs in no time!
+	
+	\section{Headings}
+		You can't escape headings! (You can but it wouldn't be wise). There are many different headings that \LaTeX provides and they have their uses. The main ones you will be using for time to time are these: \verb|\section{}|, and \verb|\subsection{}|. As you can tell, they separate paragraphs like those in other languages like HTML and this is really useful stuff. You can name the section or subsection by typing the name inside the parentheses of these commands. Once you do, you can compile and you will get stuff that you see in this document.
+		
+		Note that you can place text under any kind of heading, which is great for document writing. Below are examples of subsections and subsubsections if you want to use them. By default, headings are numbered so if you don't want them numbered, you can add an $*$ to the heading like so \verb|\section*{}|.
+		
+		In other document classes like report and book, you also have a chapter heading which is also useful, but it is not available for article classes.
 		
 		\subsection{First Subsection}
-			
-			You can place text under here!
+			As you can see, this is under the previous heading and has it's own numbering.
 			
 			\subsubsection{First Sub Subsection}
+				If you want to go even futher with these headings, you can even declare subsubsections. These also are numbered.
 				
-				You can place text under here!
+	\section{Conclusion}
+		With all these, this concludes basic formatting of a document and hopefully it starts you on your journey to learn more about \LaTeX . Have fun with it! There is more notes to come.
 
+
+% This is to denote when the document ends. With any begin command, you must end it with the same paramter.
+% Other wise the compiler will not know when the the command ends.
 \end{document}

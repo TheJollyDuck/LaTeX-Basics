@@ -1,60 +1,84 @@
-
-
 \documentclass[12pt, a4paper]{article}
 
-
+\title{Session 1 Maths Equations}
+\author{Again... \\ Just a random person :)}
+\date{\today}
 
 \begin{document}
+	\maketitle
 
+	\section{Introduction}
+		Hello! In this document, I will be talking about a method of generating nice looking maths stuff using \LaTeX , which is way superior to the methods done through Word.
+		Once you start with this, there is no going back, and if you don't plan on using \LaTeX at all, this is still something I would recommend learning since this feature
+		can be used as well in Word as they implemented it there.
 
-	\section{Basic Maths Equations}
-	
-		You can have equations in a paragraph like this, just use singular ``\$" $F=ma$. This way, you can embed different terms like $\theta$ and $C_1$ in our sentences. It's pretty cool if you ask me.
-	
-		Sometimes you want to have an equation by itself between paragraphs and that's fine too. You can use double ``\$" to do that for you. If you include it inbetween a paragraph like this, $$v = ut + \frac{1}{2}at^2$$ you will split the paragraph in 2, which is fine if that's what you intended.
+	\section{Maths Equations}
+		In \LaTeX , there is a feature in which we can generate great looking maths equations using the markup language that comes with \LaTeX .
+		But before we can generate these maths stuff, we must enable something called math mode, which encompasses the math code. This is denoted by the symbol ``\$''.
+		The layout can be seen as this ``\texttt{\$ ---- insert code ---- \$}". An example maths equation is this: $ v = u + at $ . With this feature, you can
+		embedd maths features inside paragraphs with relative ease.
 
-		If you really need to, for references later in your document, you can use the ``\texttt{\textbackslash begin\{equation\}}" line to label them with numbers. This feature and ``\$" are only used in \LaTeX , so you can't use this line in Word's Maths equation editor. You do not need to use ``\$" for this. Below is an example:
-		
-		\begin{equation}
-			L\{f(t)\} = F(s)
-		\end{equation}
+		In \LaTeX , there is also feature that you can have maths expressions and equations by themselves, which is also easy to implement. You can do this
+		by using the ``\$'' symbol twice on each end of the maths code. The layout would look like this:
+		\texttt{\$\$ -- insert code -- \$\$}. To see it in action, this is what happens:
 
-		
-		You can see that it's labelled with a number that's automatically generated. And that's one of the reasons to use \LaTeX . Below is some sample code to get you started:
-		
-		$A + B = C$ is a simple equation that we can define inside \LaTeX . $V_1$
-		
-		$$A^3 + B^2 = C^4$$
-		
-		$$A^{x+3}$$
-		
-		$$V_{RC}$$
-		
-		$$S = \left[\frac{s+4}{(s+2)(s+3)}\right]$$
-		
-		$$ tan(\tau)$$
+		$$x^2 + 2x + 1 = (x+1)(x+1)$$
 
-		Simple Equation:
-		$$A + B = C$$
-		
-		Exponents:
-		$$A^2 + B^{1+1} = C^2$$
-		
-		Subscripts:
-		$$V_T = V_i + V_{RC}$$
-		
-		Fractions:
-		$$\frac{s+5}{(s+6)(s+4)} = \frac{A}{s+6} + \frac{B}{s+4}$$
-		
-		Brackets for large equations:
-		$$\left[\frac{b_1 + b_2z_1}{1 + a_1z^1 +a_2z^2 + a_3z^3}\right]z^{-2}$$
-		
-		Greek Letters:
-		$$tan(\theta) = \frac{opp}{adj}$$
-		
-		\begin{equation}
-		H(s) = \frac{s+5}{(s+3)(s+4)}
-		\end{equation}
+		With this feature, just note that when you include it inside a paragraph, the compiler will split the paragraph along
+		where the math code was included into 2 separate parts, as you can see here:
+		$$F = ma$$
+		You can see that this part has been separated from the other part of the paragraph so be careful when you use this feature.
+
+		\subsection{Using Maths Mode}
+			When using maths mode in \LaTeX , you should know how to use in the best way possible to generate nice equations.
+			So in this case, you must understand the syntax of it to make sure you know how to use it properly.
+
+			\subsection{Basic Equations}
+				This needs no introduction. There are some of the things to generate the most basic of equations.
+				For using operators, it is more or less simple for some of them for $=$ and $+$ and $-$. For multiplication and division
+				operators, you will need to use the following commands ``\texttt{$\backslash$div and $\backslash$times}", which will output 
+				this $\div$ and $\times$. So with these features, we can generate this particular equation.
+
+				$$ A + B - (C \div D) = A \times B + (C \div D)$$
+
+			\subsection{Exponents and Subscripts}
+				You are also able to denote exponents and subscripts on terms and expressions throughout maths mode and its implementation is quite easy enough.
+				You can do this with these 2 characters: `\verb|_|' (underscore for subscript) and `\verb|^|' (hat for exponent). You can see them in action here:
+				
+				$$ s = v_i + 0.5at^2$$
+				
+				If you want to have more than 1 thing as a subscript, you must use curly brackets ``\verb|{}|" to encompass the expression:
+				
+				$$V^{AT}_{Total} = V^A_1 + V^T_2$$
+				
+			\newpage
+			\subsection{Fractions}
+				Now this is also quite easily implemented using the ``\verb|\frac{}{}|" command which formats the fraction properly with the first pair of brackets which will contain the numerator and the latter for the denominator. For example here is an example transfer function which uses such feature:
+				
+				$$H(s) = \frac{s+4}{(s+4)(s+2)} = \frac{s+4}{s^2 + 6s + 8}$$
+				
+				This command is flexible as you can also include them exponents and subscripts (quite useful for definite integrals) with the parentheses I mentioned previously:
+				
+				$$3^2 = (3^{\frac{1}{2}}) + (3^{1.5}) \neq 3_{\frac{1}{2}}$$
+				
+				$$\int^2_{-2}5x^{\frac{1}{2}}\ dx = 5\int^2_{-2}\sqrt[]{x}\ dx$$
+				
+			
+			\subsection{Brackets/Parentheses}
+				While brackets in maths mode will work fine for basic equations, they will need some extra direction to control their size. We will have to use these commands \verb|\left| and \verb|\right|. With these, they define what kind of bracket they use like this \verb|\left[|, with the bracket being interchangeable according to your needs. Unlike the \verb|\begin{}| and \verb|end{}| commands, they don't need to be paired, and the don't have to be the same parentheses either, so feel free to mix and match. Here is an example of them being used:
+				
+				$$H(s)\cdot G(s) = \frac{GH}{1 + GH} = \left[\frac{s+1}{(s+4)(s+3)}\right]\cdot\left[\frac{s+4}{(s+2)(s+6)}\right]$$
+				
+				If you read the source code, I didn't use the commands for the inner brackets as they don't need to be resized for 1 character heights.
+				
+			\subsection{Greek Letters}
+				Greek letters are simple enough to implement as each letter has its corresponding word command for it. For $\theta$, you use \verb|\theta|. Note that case matters as capitalizing the first letter will tell the compiler that you want the uppercase letter instead. So typing \verb|\Omega| will give you $\Omega$ and not $\omega$ if you wanted the lowercase version.
+				
+				Depending on your text editor, they may have a handy tab that has the plethora of symbols that you can click and the command for them is placed where the cursor is in the main editor window if you don't want to memorize the letter or you don't know the word for it.
+				
+		\section{Conclusion}
+			So you now know the basics of using the maths mode. I hope that these notes have helped you improve your document writing and in later notes, we will be covering more ways you can use math mode for more juicier stuff. Have fun with \LaTeX !
+
 		
 
 \end{document}
