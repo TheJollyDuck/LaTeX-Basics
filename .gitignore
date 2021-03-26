@@ -277,3 +277,6 @@ TSWLatexianTemp*
 
 # custom folders
 output/
+
+# custom extensions
+*.zip
