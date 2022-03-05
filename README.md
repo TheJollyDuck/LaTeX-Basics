@@ -1,5 +1,5 @@
 # LaTeX-Basics
-TeX files that help you with learning to code in LaTeX. More of a passion project of mine.
+TeX files that help you with learning to code in LaTeX. More of a passion project of mine. If you have any questions that you have that were not resolved on other forums (such as stack exchange), or if you have any questions in regards to my code on this repository or elsewhere, please feel free to start some threads on the issues tab, and I'll try to answer some of your questions there.
 
 ## Resources
  - [My GitHub Repo for LaTeX Basics](https://github.com/TheJollyDuck/LaTeX-Basics)
