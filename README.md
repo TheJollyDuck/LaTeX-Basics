@@ -1,25 +1,48 @@
 # LaTeX-Basics
-TeX files that help you with learning to code in LaTeX.
+TeX files that help you with learning to code in LaTeX. More of a passion project of mine.
 
-## Useful Links
-These are some useful links that you can use to further expand your knowledge of LaTeX.
+## Resources
+ - [My GitHub Repo for LaTeX Basics](https://github.com/TheJollyDuck/LaTeX-Basics)
+   - [Wiki for general information](https://github.com/TheJollyDuck/LaTeX-Basics/wiki)
+ - [Overleaf LaTeX Documentation](https://www.overleaf.com/learn)
+ 
+## TeX Distributions
+ Make sure you have about 6-7 GiB of space (max size) for any distribution
+ - [MiKTeX (Recommended for Windows)](https://miktex.org/download)
+ - TeXLive (Recommended for Linux)
+    - Ubuntu 
+      - ```sudo apt intsall texlive-full```
+    - Arch-Based/Like 
+       - ```sudo pacman -S texlive-core texlive-bibextra texlive-formatsextra texlive-langgreek texlive-latexextra texlive-pictures texlive-publishers texlive-science```
+    - Arch helper
+      - ```yay -S texlive-full```
+ 
+## Editors
+ - [TeXStudio Editor (Recommended)](https://www.texstudio.org/)
+ - [TeXMaker Editor (Looks Better but older)](https://www.xm1math.net/texmaker/log.html)
+ - [VSCode](https://code.visualstudio.com/)
+    - [LaTeX Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+ - [Notepad++ (Windows Only)](https://notepad-plus-plus.org/downloads/)
+ - Notepaddqq (Linux alternative)
+    - Ubuntu
+      - ```sudo apt install notepadqq```
+    - Arch Based/Like
+      - ```sudo pacman -S notepadqq```
 
-- MiKTeX  (TeX Distribution that's easy to use)
+## Git
+  - [Git website for Windows download](https://git-scm.com/)
+  - Ubuntu
+    - ```sudo apt install git```
+  - Arch Based/Like
+    - ```sudo pacman -S git```
 
-  https://miktex.org/download
-
-- TexMaker (A usefull dedicated TeX Editor)
+## More LaTeX Packages
+  If you need more packages for specific operations, please refer to [this](https://ctan.org/) website for all available packages.
   
-  https://www.xm1math.net/texmaker/
+## IEEE Format Template
+  - [PDF Instructions](http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf)
+  - [Template file](https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/conference-latex-template_10-17-19.zip)
+  - [Template .bib file](https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/IEEEtranBST2.zip)
 
-- CTAN (Comprehensive TeX Archive Network)
-
-  https://ctan.org/
-
-- Overleaf Documentation (A comprehensive compilation of LaTeX features)
-
-  https://www.overleaf.com/learn
-
-- VS Code LaTeX Extension (Nice extension if you want to use VS Code for LaTeX)
-
-  https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+## Mendeley Desktop
+  - [Downloads](https://www.mendeley.com/download-reference-manager/windows)
