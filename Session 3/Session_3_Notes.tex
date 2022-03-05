@@ -1,0 +1,109 @@
+
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{float}
+\usepackage[utf8]{inputenc} % To allow Non-ASCII characters to be used as well
+\usepackage{listings}       % To allow the use of code snippets. Refer to documentation for other features.
+\usepackage{xcolor}         % To allow extended use of colours.
+
+\title{Session 3 Notes}
+\author{Me :)}
+\date{\today}
+
+
+% Defining Colours
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0,0.58,0.82}
+\definecolor{codblue}{rgb}{0,0.40,0.95}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\definecolor{randomcol}{RGB}{0, 128, 128}
+
+% Defining Syntax Highlighting
+\lstdefinestyle{mystyle}{
+    backgroundcolor 	= \color{backcolour},   
+    commentstyle    	= \color{codegreen},
+    keywordstyle    	= \color{codblue},
+    numberstyle     	= \tiny\color{codegray},
+    stringstyle			= \color{codeblue},
+    basicstyle			= \ttfamily\footnotesize,
+    breakatwhitespace 	= false,         
+    breaklines			= true,                 
+    captionpos			= b,                    
+    keepspaces			= true,                 
+    numbers				= left,                    
+    numbersep			= 5pt,                  
+    showspaces			= false,                
+    showstringspaces	= false,
+    showtabs			= false,                  
+    tabsize 			= 2
+}
+
+\begin{document}
+  \maketitle
+
+  \section{Introduction}
+    This set of notes will explain to add code snippets inside your document, as well as minor formatting stuff we can use that I've should've covered previously in the notes but here we are, such as colour and lists.
+
+    We'll also mess with header spacing to provide more customizeability of how headings are placed.
+
+  \section{Text Formatting}
+    This is the normal font
+
+    \textrm{"This is the Romanized font. You can see that it is different from the default font."}
+
+    \textsf{"This is the Sans Serif font. You can see that it is different from the default font."}
+
+    \texttt{"This is the Typewriter font. It is widely used for code snippets in \LaTeX"}
+
+    \textsf{\textbf{This is a san serif font with boldening and italics. You can mix and math these commands together. }}
+
+    \textsf{\textit{Banana 2}}
+
+    \textsc{Banana}
+
+
+    {\LARGE THIS IS A LARGE SENTENCE DUE TO ITS FONT SIZE}
+
+    {\tiny This is a teeny tiny sentence due to its font size}
+
+
+  \section{Colours}
+    Colours are quite useful for many things in your document if you need some highlighting, like for code for example. We went 
+
+    \textcolor{blue}{"This banana sentence is in blue"}
+    \textcolor{randomcol}{``This sentence is in another colour"}
+
+    \begin{itemize}
+      \item \textcolor{randomcol}{banana}
+      \item Bread
+      \item Rice
+      \item Noodle
+      \item Chicken
+    \end{itemize}
+
+  \section{Code Snippets}
+
+    \begin{figure}[H]
+      \lstset{style = mystyle}
+      \lstinputlisting[language = C]{File_1.c}
+      \caption{Example Code of C89}
+    \end{figure}
+
+    \begin{verbatim}
+      #include<stdio.h>
+
+      int main (void) {
+
+        int var1 = 0;
+
+        printf("Program Completed!");
+        return 0;
+      }
+    \end{verbatim}
+
+  \section{Heading Manipulation}
+
+\end{document}
